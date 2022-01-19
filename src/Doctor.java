@@ -18,5 +18,6 @@ public class Doctor implements Login{
     @Override
     public void dashboard(){
         System.out.println("welcome to doctor dashboard");
+
     }
 }

@@ -6,7 +6,7 @@ public class pharmacyAdapter implements Pharmacy{
         if(medCategory.equalsIgnoreCase("flu")){
             medicines = new fluMeds();
         }
-        else if(medCategory.equalsIgnoreCase("blood pressure")){
+        else if(medCategory.equalsIgnoreCase("BP")){
             medicines = new bloodPressureMeds();
         }
         else{

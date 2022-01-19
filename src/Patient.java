@@ -22,8 +22,7 @@ public class Patient implements Login,Medicines{
     // here I am using purchaseMed to get the med category type
     @Override
     public void selectmedCategory(String medCategory) {
-        System.out.println(medCategory.equalsIgnoreCase("blood pressure"));
-        if(medCategory.equalsIgnoreCase("flu") || medCategory.equalsIgnoreCase("blood pressure") || medCategory.equalsIgnoreCase("stomach pain")){
+        if(medCategory.equalsIgnoreCase("flu") || medCategory.equalsIgnoreCase("BP") || medCategory.equalsIgnoreCase("stomachache")){
             pharmacyAdapter = new pharmacyAdapter(medCategory);
             pharmacyAdapter.displayAvailableMedicines();
         }
@@ -40,7 +39,8 @@ public class Patient implements Login,Medicines{
                 dashboard();
                 break;
             case 2:
-                System.out.println("1. flu\n2. blood pressure\n3. stomach pain");
+                System.out.println("1. flu\n2. BP\n3. stomachache");
+                System.out.println("Enter category name: ");
                 String category = sc.next();
                 selectmedCategory(category);
                 dashboard();
